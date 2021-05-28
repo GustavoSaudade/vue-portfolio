@@ -2,7 +2,7 @@
     <div>
         <section class="section">
             <div class="container-fliud">
-                <img alt="Vue logo" class="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Woman_1.jpg/220px-Woman_1.jpg">
+                <img alt="Vue logo" class="rounded-circle" src="../assets/imgs/avatar.png">
                 <h1>Software Developer</h1>
                 <p>This is a fun project I built while learning
                    vue.js and bootstrap
@@ -23,6 +23,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+    .container {
+        background-color: aqua;
+    }
+
     .section{
         padding-top: 10%;
         padding-bottom: 10%;
