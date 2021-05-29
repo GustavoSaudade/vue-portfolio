@@ -8,10 +8,6 @@
     <div class="row first-section">
       <div class="col-12">
         <ProgramLangues></ProgramLangues>
-      </div>
-    </div>
-    <div class="row first-section">
-      <div class="col-12">
         <SpecificFrameworks></SpecificFrameworks>
       </div>
     </div>
@@ -56,11 +52,6 @@ export default {
   border: solid 1px #000;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px;
-}
-
-.specific-frameworks {
-  border: solid 1px #000;
   padding: 20px;
 }
 </style>

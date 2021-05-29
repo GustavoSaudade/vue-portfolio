@@ -10,68 +10,48 @@
           <div class="col-6 specific-frameworks">
             <h4>JAVASCRIPT</h4>
             <div class="row">
-              <div class="col-6">
-                <Progress strokeColor="#FF00AA" value="16.88">
+              <div class="col-6" v-for="(framework, i) in frameworks" :key="i">
+                <Progress :strokeColor="framework.color" :value="framework.value">
                   <template v-slot:footer>
-                    <b>VueJs</b>
-                  </template>
-                </Progress>
-              </div>
-              <div class="col-6">
-                <Progress strokeColor="#FF00AA" value="16.88">
-                  <template v-slot:footer>
-                    <b>ReactJs</b>
-                  </template>
-                </Progress>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <Progress strokeColor="#FF00AA" value="16.88">
-                  <template v-slot:footer>
-                    <b>Angular</b>
-                  </template>
-                </Progress>
-              </div>
-              <div class="col-6">
-                <Progress strokeColor="#FF00AA" value="16.88">
-                  <template v-slot:footer>
-                    <b>Jquery</b>
+                    <b>{{ framework.name }}</b>
                   </template>
                 </Progress>
               </div>
             </div>
           </div>
           <div class="col-6 specific-frameworks">
-            <h4>JAVASCRIPT</h4>
+            <h4>NODE</h4>
             <div class="row">
-              <div class="col-6">
-                <Progress strokeColor="#FF00AA" value="16.88">
+              <div class="col-6" v-for="(framework, i) in frameworksNode" :key="i">
+                <Progress :strokeColor="framework.color" :value="framework.value">
                   <template v-slot:footer>
-                    <b>VueJs</b>
-                  </template>
-                </Progress>
-              </div>
-              <div class="col-6">
-                <Progress strokeColor="#FF00AA" value="16.88">
-                  <template v-slot:footer>
-                    <b>ReactJs</b>
+                    <b>{{ framework.name }}</b>
                   </template>
                 </Progress>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 specific-frameworks">
+            <h4>Python</h4>
             <div class="row">
-              <div class="col-6">
-                <Progress strokeColor="#FF00AA" value="16.88">
+              <div class="col-12" v-for="(framework, i) in frameworksPython" :key="i">
+                <Progress :strokeColor="framework.color" :value="framework.value">
                   <template v-slot:footer>
-                    <b>Angular</b>
+                    <b>{{ framework.name }}</b>
                   </template>
                 </Progress>
               </div>
-              <div class="col-6">
-                <Progress strokeColor="#FF00AA" value="16.88">
+            </div>
+          </div>
+          <div class="col-6 specific-frameworks">
+            <h4>Database</h4>
+            <div class="row">
+              <div class="col-6" v-for="(framework, i) in frameworksDatabase" :key="i">
+                <Progress :strokeColor="framework.color" :value="framework.value">
                   <template v-slot:footer>
-                    <b>Jquery</b>
+                    <b>{{ framework.name }}</b>
                   </template>
                 </Progress>
               </div>
@@ -89,10 +69,36 @@ export default {
   name: 'SpecificFrameworks',
   components: {
     Progress
+  },
+  data () {
+    return {
+      frameworks: [
+        { name: 'VueJs', value: '90.55', color: '#aaff00' },
+        { name: 'ReactJs', value: '70.83', color: '#ffc404' },
+        { name: 'Angular', value: '68.90', color: '#ffc404' },
+        { name: 'JQuery', value: '80.25', color: '#aaff00' }
+      ],
+      frameworksNode: [
+        { name: 'Express', value: '80', color: '#aaff00' },
+        { name: 'MEAN', value: '72.41', color: '#ffc404' },
+        { name: 'Socket', value: '49.88', color: '#e94b4b' },
+        { name: 'NestJs', value: '52.88', color: '#e94b4b ' }
+      ],
+      frameworksPython: [
+        { name: 'Django Rest Framework', value: '78.15', color: '#ffc404' }
+      ],
+      frameworksDatabase: [
+        { name: 'SQL', value: '66.15', color: '#ffc404' },
+        { name: 'Mongo DB', value: '90.03', color: '#aaff00' }
+      ]
+    }
   }
 }
 </script>
 
 <style lang="scss">
-
+.specific-frameworks {
+  border: solid 1px #000;
+  padding: 20px;
+}
 </style>

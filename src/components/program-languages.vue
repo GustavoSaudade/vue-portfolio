@@ -21,13 +21,12 @@ export default {
   components: {},
   data () {
     return {
-      intervalID: '',
       increment: 1,
       skillSet: [
-        { area: 'html', initLevel: 0, level: 98 },
         { area: 'JavaScript', initLevel: 0, level: 93 },
-        { area: 'css', initLevel: 0, level: 88 },
-        { area: 'Python', initLevel: 0, level: 70 },
+        { area: 'Node', initLevel: 0, level: 87 },
+        { area: 'Python', initLevel: 0, level: 74 },
+        { area: 'Database', initLevel: 0, level: 70 },
         { area: 'Java', initLevel: 0, level: 65 },
         { area: 'SAP', initLevel: 0, level: 49 }
       ]
@@ -44,9 +43,6 @@ export default {
         data.initLevel = Math.min(Math.floor(data.initLevel + value), data.level)
       })
     }
-  },
-  beforeDestroy: function () {
-    clearInterval(this.intervalID)
   }
 }
 </script>
