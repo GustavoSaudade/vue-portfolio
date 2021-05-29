@@ -89,7 +89,7 @@ export default {
   background-color: #0d1117;
 }
 .skill-section {
-  border: solid 1px #000;
+  border: solid 1px #ddd;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;

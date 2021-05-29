@@ -98,7 +98,7 @@ export default {
 
 <style lang="scss">
 .specific-frameworks {
-  border: solid 1px #000;
+  border: solid 1px #ddd;
   padding: 20px;
 }
 </style>
