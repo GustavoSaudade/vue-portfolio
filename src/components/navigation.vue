@@ -12,7 +12,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Developer</a>
+      <a class="navbar-brand" href="#">Gustavo Saudade</a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
@@ -39,7 +39,7 @@ export default {
 
   data () {
     return {
-      landerLink: 'Lander',
+      landerLink: 'Card',
       skillsLink: 'Skills',
       portfolioLink: 'Portfolio',
       contactLink: 'Contact'
@@ -50,6 +50,6 @@ export default {
 
 <style lang="scss">
 li {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 </style>
