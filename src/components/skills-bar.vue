@@ -8,30 +8,30 @@
     <div class="row">
       <div class="col-12">
         <ul class="nav nav-tabs">
-          <li role="presentation" class="tab active">
-            <span>Technical</span>
+          <li role="presentation" :class="{ tab: true, active: technicalActive }" @click="changeActive('activeTechnical')">
+            Technical
           </li>
-          <li role="presentation" class="tab" v-on:click="changeActive($event)">
-            <span>Project Management</span>
+          <li role="presentation" :class="{ tab: true, active: projectActive }" @click="changeActive('activeProjectManagement')">
+            Project Management
           </li>
-          <li role="presentation" class="tab">
-            <span>Languages</span>
+          <li role="presentation" :class="{ tab: true, active: languagesActive }" @click="changeActive('activeLanguages')">
+            Languages
           </li>
         </ul>
       </div>
     </div>
-    <div class="row first-section">
+    <div class="row section" v-if="technicalActive">
       <div class="col-12">
         <ProgramLangues></ProgramLangues>
         <SpecificFrameworks></SpecificFrameworks>
       </div>
     </div>
-    <div class="row first-section">
+    <div class="row section" v-if="projectActive">
       <div class="col-12">
         <Agile></Agile>
       </div>
     </div>
-    <div class="row first-section">
+    <div class="row section" v-if="languagesActive">
       <div class="col-12">
         <Languages></Languages>
       </div>
@@ -53,10 +53,30 @@ export default {
     Agile,
     Languages
   },
+  data () {
+    return {
+      technicalActive: true,
+      projectActive: false,
+      languagesActive: false
+    }
+  },
   methods: {
-    changeActive: function (event) {
-      alert('Hello')
-      console.log(event)
+    changeActive: function (tabName) {
+      if (tabName === 'activeTechnical') {
+        this.technicalActive = true
+        this.projectActive = false
+        this.languagesActive = false
+      }
+      if (tabName === 'activeProjectManagement') {
+        this.technicalActive = false
+        this.projectActive = true
+        this.languagesActive = false
+      }
+      if (tabName === 'activeLanguages') {
+        this.technicalActive = false
+        this.projectActive = false
+        this.languagesActive = true
+      }
     }
   }
 }
@@ -69,7 +89,7 @@ export default {
   color: darken($gray-color, 25%);
 }
 
-.first-section {
+.section {
   border: solid 1px #000;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -77,9 +97,7 @@ export default {
 }
 .tab {
   padding: 10px 15px;
-  span {
-    color: #555;
-  }
+  color: #555;
 }
 .active {
   cursor: default;
@@ -88,8 +106,6 @@ export default {
   border-bottom-color: transparent;
   position: relative;
   display: block;
-  span {
-    color: #007bff;
-  }
+  color: #007bff;
 }
 </style>
