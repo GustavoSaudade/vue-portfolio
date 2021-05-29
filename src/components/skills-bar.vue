@@ -1,8 +1,13 @@
 <template>
-  <div>
+  <div class="container">
     <div class="row">
       <div class="col-12">
         <h1 class="subtilte">Skills</h1>
+      </div>
+    </div>
+    <div class="row first-section">
+      <div class="col-12">
+        <h2>Program languages</h2>
         <ul>
           <li class="skill" v-for="(skill, i) in skillSet" :key="i">
             <div :style="{ width: skill.initLevel + '%' }">
@@ -13,54 +18,144 @@
         </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="col-6">
-        <Progress :radius="50" :strokeWidth="10" value="86.12">
-          <template v-slot:footer>
-            <b>Bolder & Bigger One</b>
-          </template>
-        </Progress>
-      </div>
-      <div class="col-6">
-        <Progress
-          :transitionDuration="5000"
-          :radius="50"
-          :strokeWidth="10"
-          value="86.12">
-          <template v-slot:footer>
-            <b>Slow One</b>
-          </template>
-        </Progress>
+    <div class="row first-section">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12">
+            <h3>Specific Frameworks</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 specific-frameworks">
+            <h4>JAVASCRIPT</h4>
+            <div class="row">
+              <div class="col-6">
+                <Progress strokeColor="#FF00AA" value="16.88">
+                  <template v-slot:footer>
+                    <b>VueJs</b>
+                  </template>
+                </Progress>
+              </div>
+              <div class="col-6">
+                <Progress strokeColor="#FF00AA" value="16.88">
+                  <template v-slot:footer>
+                    <b>ReactJs</b>
+                  </template>
+                </Progress>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <Progress strokeColor="#FF00AA" value="16.88">
+                  <template v-slot:footer>
+                    <b>Angular</b>
+                  </template>
+                </Progress>
+              </div>
+              <div class="col-6">
+                <Progress strokeColor="#FF00AA" value="16.88">
+                  <template v-slot:footer>
+                    <b>Jquery</b>
+                  </template>
+                </Progress>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 specific-frameworks">
+            <h4>JAVASCRIPT</h4>
+            <div class="row">
+              <div class="col-6">
+                <Progress strokeColor="#FF00AA" value="16.88">
+                  <template v-slot:footer>
+                    <b>VueJs</b>
+                  </template>
+                </Progress>
+              </div>
+              <div class="col-6">
+                <Progress strokeColor="#FF00AA" value="16.88">
+                  <template v-slot:footer>
+                    <b>ReactJs</b>
+                  </template>
+                </Progress>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <Progress strokeColor="#FF00AA" value="16.88">
+                  <template v-slot:footer>
+                    <b>Angular</b>
+                  </template>
+                </Progress>
+              </div>
+              <div class="col-6">
+                <Progress strokeColor="#FF00AA" value="16.88">
+                  <template v-slot:footer>
+                    <b>Jquery</b>
+                  </template>
+                </Progress>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-3">
-        <Progress strokeColor="#FF00AA" value="16.88">
-          <template v-slot:footer>
-            <b>More Color</b>
-          </template>
-        </Progress>
+    <div class="row first-section">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12">
+            <h2>Agile & Project Management</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <Progress :radius="50" :strokeWidth="10" value="92.12">
+              <template v-slot:footer>
+                <b>Scrum</b>
+              </template>
+            </Progress>
+          </div>
+          <div class="col-6">
+            <Progress
+              :transitionDuration="5000"
+              :radius="50"
+              :strokeWidth="10"
+              value="86.12">
+              <template v-slot:footer>
+                <b>Kanban</b>
+              </template>
+            </Progress>
+          </div>
+        </div>
       </div>
-      <div class="col-3">
-        <Progress strokeColor="#FF00AA" value="16.88">
-          <template v-slot:footer>
-            <b>More Color</b>
-          </template>
-        </Progress>
-      </div>
-      <div class="col-3">
-        <Progress strokeColor="#FF00AA" value="16.88">
-          <template v-slot:footer>
-            <b>More Color</b>
-          </template>
-        </Progress>
-      </div>
-      <div class="col-3">
-        <Progress strokeColor="#FF00AA" value="16.88">
-          <template v-slot:footer>
-            <b>More Color</b>
-          </template>
-        </Progress>
+    </div>
+    <div class="row first-section">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12">
+            <h2>Languages</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <Progress :radius="50" :strokeWidth="10" value="100.00">
+              <template v-slot:footer>
+                <b>Portuguese</b>
+              </template>
+            </Progress>
+          </div>
+          <div class="col-6">
+            <Progress
+              :transitionDuration="5000"
+              :radius="50"
+              :strokeWidth="10"
+              strokeColor="#e67c0b"
+              value="66.75">
+              <template v-slot:footer>
+                <b>English</b>
+              </template>
+            </Progress>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -79,12 +174,12 @@ export default {
       intervalID: '',
       increment: 1,
       skillSet: [
-        { area: 'java', initLevel: 0, level: 50 },
-        { area: 'c/c++', initLevel: 0, level: 60 },
-        { area: 'python', initLevel: 0, level: 70 },
-        { area: 'php', initLevel: 0, level: 80 },
-        { area: 'css3', initLevel: 0, level: 90 },
-        { area: 'html5', initLevel: 0, level: 100 }
+        { area: 'html', initLevel: 0, level: 98 },
+        { area: 'JavaScript', initLevel: 0, level: 93 },
+        { area: 'css', initLevel: 0, level: 88 },
+        { area: 'Python', initLevel: 0, level: 70 },
+        { area: 'Java', initLevel: 0, level: 65 },
+        { area: 'SAP', initLevel: 0, level: 66 }
       ]
     }
   },
@@ -133,5 +228,17 @@ export default {
       right: 8px;
     }
   }
+}
+
+.first-section {
+  border: solid 1px #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.specific-frameworks {
+  border: solid 1px #000;
+  padding: 20px;
 }
 </style>
