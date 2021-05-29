@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button
         class="navbar-toggler"
         type="button"
@@ -49,6 +49,10 @@ export default {
 </script>
 
 <style lang="scss">
+.navbar, .navbar-expand-lg {
+  color: #f0f6fc;
+}
+
 li {
   margin-left: 20px;
 }

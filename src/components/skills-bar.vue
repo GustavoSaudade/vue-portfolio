@@ -20,18 +20,18 @@
         </ul>
       </div>
     </div>
-    <div class="row section" v-if="technicalActive">
+    <div class="row skill-section" v-if="technicalActive">
       <div class="col-12">
         <ProgramLangues></ProgramLangues>
         <SpecificFrameworks></SpecificFrameworks>
       </div>
     </div>
-    <div class="row section" v-if="projectActive">
+    <div class="row skill-section" v-if="projectActive">
       <div class="col-12">
         <Agile></Agile>
       </div>
     </div>
-    <div class="row section" v-if="languagesActive">
+    <div class="row skill-section" v-if="languagesActive">
       <div class="col-12">
         <Languages></Languages>
       </div>
@@ -85,11 +85,10 @@ export default {
 <style lang="scss">
 @import "./src/assets/variables.scss";
 
-.subtilte {
-  color: darken($gray-color, 25%);
+.container {
+  background-color: #0d1117;
 }
-
-.section {
+.skill-section {
   border: solid 1px #000;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -97,7 +96,6 @@ export default {
 }
 .tab {
   padding: 10px 15px;
-  color: #555;
 }
 .active {
   cursor: default;

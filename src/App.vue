@@ -20,6 +20,10 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import "./src/assets/variables.scss";
 
+html {
+  background-color: #0d1117;
+}
+
 *, *::before, *::after {
   margin: 0; padding: 0;
   box-sizing: border-box;
@@ -28,13 +32,14 @@ export default {
 
 #app {
   text-align: center;
-  color: #2c3e50;
+  color: #8b949e;
+  background-color: #0d1117;
 }
 
 #nav {
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #f3f3f3;
 
     &.router-link-exact-active {
       color: #42b983;

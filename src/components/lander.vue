@@ -30,5 +30,7 @@ export default {
 .section {
   padding-top: 10%;
   padding-bottom: 10%;
+  background-color: #0d1117;
+  color: #8b949e;
 }
 </style>
