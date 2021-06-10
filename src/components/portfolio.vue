@@ -94,7 +94,6 @@ export default {
 @import "./src/assets/variables.scss";
 
 .protfolio{
-  background-color: $gray-color;
   padding-top: 8%;
   padding-bottom: 15%;
 }
